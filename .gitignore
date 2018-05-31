@@ -1,0 +1,51 @@
+
+# Debug Symbols
+*.dSYM
+
+# Compiled Object files
+*.slo
+*.lo
+*.o
+*.obj
+
+# Precompiled Headers
+*.gch
+*.pch
+
+# Compiled Dynamic libraries
+*.so
+*.dylib
+*.dll
+
+# Fortran module files
+*.mod
+
+# Compiled Static libraries
+*.lai
+*.la
+*.a
+*.lib
+
+# Executables
+*.exe
+*.out
+*.app
+*.x
+
+# Image files
+*.eps
+
+# Text files
+*.txt
+
+# PDB files
+*.pdb
+
+# XYZ files
+*.xyz
+
+# Directories
+trainingset/
+fit/
+PES/
+documents/
