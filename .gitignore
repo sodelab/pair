@@ -28,9 +28,19 @@
 
 # Executables
 *.exe
+*.com
+*.xml
 *.out
+*.xml_*
+*.out_*
 *.app
 *.x
+
+*.json
+*.pbs
+*.stdout
+*.stderr
+*.log
 
 # Image files
 *.eps
@@ -49,3 +59,7 @@ trainingset/
 fit/
 PES/
 documents/
+.ipynb_checkpoints/
+runinfo/
+.ipengine_logs/
+
