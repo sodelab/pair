@@ -1,88 +1,54 @@
-# pair
-# Project Title
+# Pair-PES
 
-One Paragraph of project description goes here
+This jupyter notebook project uses modern electronic structure methods to build a potential energy surface (PES) of molecular dimers. PES scans can be performed along many characteristic coordinates and combinations of coordinates using a variety of quantum mechanical theory, basis sets, and programs. 
 
 ## Getting Started
 
-These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. See deployment for notes on how to deploy the project on a live system.
+These instructions will get your copy of the project up and running on your local machine. 
 
 ### Prerequisites
 
-What things you need to install the software and how to install them
+In order to run the program you'll obviously need jupyter notebook, but also a few other modules in order to initialize the correct notebook environment. These include
 
 ```
-Give examples
+numpy
+matplotlib
+parsl
+ipywidgets
+cirpy
+ipykernel
+electronic structure package, like NWChem or Molpro
 ```
 
 ### Installing
 
-A step by step series of examples that tell you how to get a development env running
+In order to install jupyter notebook and the requisite modules, it is advised to use the conda source and package management system. This makes for simple installation and ensures the correct dependencies. 
 
-Say what the step will be
+1. If you don't already have anaconda installed, download the latest version from the [website](https://www.anaconda.com/download/).  
 
-```
-Give the example
-```
+2. On the terminal, create a new conda environment with at least python 3, since certain modules require more than python 2.7. Also when creating this new environment you can specify the packages to be installed all in one step. Refer to the conda documentation for more details on [managing environments](https://conda.io/docs/user-guide/tasks/manage-environments.html). 
 
-And repeat
+    `conda create --name myenv python=3.6 numpy matplotlib parsl ipywidgets ipykernel cirpy nwchem`
+    
+Here, a new conda environment, named `myenv` was created with python3.6 and all the necessary modules to run the Pair-PES notebook. 
 
-```
-until finished
-```
+3. Next, you should activate the new environment and ensure that jupyter will run the correct version of python. To do this, execute the following on the command line.
 
-End with an example of getting some data out of the system or using it for a little demo
+    `source activate myenv`
+    `python -m ipykernel install --name myenv --display-name "Python (myenv)"`
+    
+The first line activates the created environment. And the second line installs the kernel under the name `Python (myenv)`.
 
-## Running the tests
+4. You should now be able to launch the jupyter notebook by typing `jupyter notebook` in the command line. Once you are at the jupyter web browser home tab, select the file `pes-2b.ipynb`, which will take the main notebook. Make sure that the kernel at the far right, is the one you just created (`Python (myenv)`). If it is not, you can change it in the Kernel tab at the top.
 
-Explain how to run the automated tests for this system
+5. There are instructions and directions throughout the Pair-PES notebook about its functionality; however, if you'd like to simply see the data output, you can simply run the notebook all the way through. To do this, at the top of the screen, select the Kernel tab, and then select 'Restart & Run All'. The notebook will take a few minutes to run, but you should see the following figure once the notebook is complete. 
 
-### Break down into end to end tests
-
-Explain what these tests test and why
-
-```
-Give an example
-```
-
-### And coding style tests
-
-Explain what these tests test and why
-
-```
-Give an example
-```
-
-## Deployment
-
-Add additional notes about how to deploy this on a live system
-
-## Built With
-
-* [Dropwizard](http://www.dropwizard.io/1.0.2/docs/) - The web framework used
-* [Maven](https://maven.apache.org/) - Dependency Management
-* [ROME](https://rometools.github.io/rome/) - Used to generate RSS Feeds
-
-## Contributing
-
-Please read [CONTRIBUTING.md](https://gist.github.com/PurpleBooth/b24679402957c63ec426) for details on our code of conduct, and the process for submitting pull requests to us.
-
-## Versioning
-
-We use [SemVer](http://semver.org/) for versioning. For the versions available, see the [tags on this repository](https://github.com/your/project/tags). 
+Enjoy!
 
 ## Authors
 
-* **Billie Thompson** - *Initial work* - [PurpleBooth](https://github.com/PurpleBooth)
-
-See also the list of [contributors](https://github.com/your/project/contributors) who participated in this project.
-
-## License
-
-This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details
+* **Olaseni Sode** - *Initial work* - [SodeLab](https://github.com/sodelab)
 
 ## Acknowledgments
 
-* Hat tip to anyone whose code was used
-* Inspiration
-* etc
+* Thanks Yadu Babuji
