@@ -175,8 +175,9 @@ class molecule:
                     continue
                     
                 t=acos(z/r)
+                print(t)
                 p=atan2(y,x)
-                t+=radians(theta)
+                #t-=radians(theta)
 
                 coord[0]=r*sin(t)*cos(p)
                 coord[1]=r*sin(t)*sin(p)
